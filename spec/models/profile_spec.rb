@@ -1,13 +1,11 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Profile do
-  before(:each) do
-    @valid_attributes = {
-      
-    }
+
+  it "sets a token on create" do
+    Factory(:twitter_profile).token.should_not be_nil
   end
 
-  it "should create a new instance given valid attributes" do
-    Profile.create!(@valid_attributes)
-  end
+  xit "#set_token"
+
 end
