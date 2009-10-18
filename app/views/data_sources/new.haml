@@ -1,0 +1,10 @@
+
+
+- form_for @data_source do |f|
+  
+  %dl.input
+    %dl=label :type, "Type:"
+    %dd=select_tag 'data_source_type', options_for_select([["Twitter", "TwitterDataSource"]])
+    = render :partial => 'data_sources/fields', :locals => {:f => f}
+    
+    %dl=f.submit "Create"

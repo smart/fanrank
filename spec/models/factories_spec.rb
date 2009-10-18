@@ -10,4 +10,8 @@ describe "Factory" do
     Factory(:twitter_profile).should be_valid
   end
 
+  it "should create a valid TwitterDataSource" do
+    Factory(:twitter_data_source).should be_valid
+  end
+
 end

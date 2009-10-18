@@ -1,0 +1,5 @@
+.data_source_name= @data_source.name
+.data_source_keyword= @data_source.keyword
+
+=link_to "edit", edit_data_source_path(@data_source)
+=link_to "delete", data_source_path(@data_source), :method => "delete", :confirm => "Are you sure you want to delete this twitter data source"

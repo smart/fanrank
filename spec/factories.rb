@@ -6,7 +6,13 @@ Factory.define :fan do |f|
 end
 
 Factory.define :twitter_profile do |tp|
+  tp.association :data_source, :factory => :twitter_data_source
   tp.sequence(:identifier)    { |n| "joefan#{n}"}
+end
+
+Factory.define :twitter_data_source do |tds|
+  tds.name "Thrillist Brand"
+  tds.keyword "Thrillist.com"
 end
 
 Factory.define :twitter_profile_with_data, :parent => :twitter_profile do |tp|

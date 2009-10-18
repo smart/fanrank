@@ -1,0 +1,7 @@
+
+- form_for @data_source, :url => data_source_path(@data_source), :method => "put" do |f|
+  
+  %dl.input
+    = render :partial => 'data_sources/fields', :locals => {:f => f}
+    
+    %dl=f.submit "Update"
