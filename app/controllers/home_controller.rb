@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
   
   def twitter
-    @profiles = TwitterProfile.top_100
+    @profiles = Profile.top_100
   end
   
 end

@@ -1,8 +1,17 @@
-require 'spec_helper'
+require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe TwitterDataSource do
+describe DataSource do
 
-  it "should create a new instance given valid attributes" do
-    Factory(:twitter_data_source).should be_valid
+  
+  describe "#subscores" do
+    
+    it "should have a class method of subscore that returns the default value of []" do
+      DataSource.subscores.should == []
+    end
+    
+    it "should have an instance method of subscore that returns the default value of []" do 
+      DataSource.new.subscores.should == []
+    end
+    
   end
 end

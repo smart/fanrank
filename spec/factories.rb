@@ -5,7 +5,7 @@ Factory.define :fan do |f|
   f.score                     100.0
 end
 
-Factory.define :twitter_profile do |tp|
+Factory.define :twitter_profile, :class => :profile do |tp|
   tp.association :data_source, :factory => :twitter_data_source
   tp.sequence(:identifier)    { |n| "joefan#{n}"}
 end
